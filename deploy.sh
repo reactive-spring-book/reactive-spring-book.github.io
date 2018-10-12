@@ -11,7 +11,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 ce_dir=$(cd $(dirname $0) && pwd)
-ce_bin_dir=${ce_dir}/bin/${unamestr}
+ce_bin_dir=${ce_dir}/bin/${platform}
 export PATH=$PATH:$ce_bin_dir
 echo $ce_bin_dir
 
