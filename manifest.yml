@@ -1,0 +1,9 @@
+applications:
+- name: rsb-site
+  buildpack: staticfile_buildpack
+  disk_quota: 512M
+  instances: 1
+  memory: 512M
+  routes:
+  - route: rsb-site.cfapps.io
+  stack: cflinuxfs2
