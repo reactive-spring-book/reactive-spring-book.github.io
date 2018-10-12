@@ -6,4 +6,5 @@ applications:
   memory: 512M
   routes:
   - route: rsb-site.cfapps.io
+  - route: www.reactivespringbook.io
   stack: cflinuxfs2
