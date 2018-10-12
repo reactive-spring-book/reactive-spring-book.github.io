@@ -9,11 +9,9 @@
         }
 
         div {
-            border: 0px solid lightgray;
         }
 
         #logo {
-            border: 0px solid orange;
             width: calc(60% - 0px);
             text-align: center;
             margin: auto;
@@ -39,13 +37,13 @@
             will-change: transform;
             transform: translateZ(0);
             border: 0;
-            background-image: url('images/v1/reactive-spring-cover-art_03-white-bg.gif');
+            background-image: url('images/v2/reactive-spring-landing_06.gif');
         }
 
         #leaf:hover {
             will-change: transform;
             transform: translateZ(0); /* horrific hack to stop repaint issues on Safari */
-            background-image: url('images/v1/reactive-spring-cover-art_03.gif');
+            background-image: url('images/v2/reactive-spring-landing_06-yellow.gif');
         }
 
         /*
@@ -53,36 +51,48 @@
          */
         body:after {
             display: none;
-            content: url('images/v1/reactive-spring-cover-art_03-white-bg.gif') url('images/v1/reactive-spring-cover-art_03.gif');;
+            content: url('images/v2/reactive-spring-landing_06.gif') url('images/v2/reactive-spring-landing_06-yellow.gif');;
         }
 
         /*
          * horrific hack to precache the image for FF
          */
         #hideme-1 {
-            background: url('images/v1/reactive-spring-cover-art_03-white-bg.gif');
+            background: url('images/v2/reactive-spring-landing_06.gif');
         }
 
         #hideme-2 {
-            background: url('images/v1/reactive-spring-cover-art_03.gif');
+            background: url('images/v2/reactive-spring-landing_06-yellow.gif');
         }
     </style>
 </head>
 <body style="padding-top: 100px">
+
 <div id="logo">
-    <div id="row-1"><img src="images/v1/reactive-spring-cover-art_01.gif"/></div>
+    <div style="padding-bottom: 20px">
+        <img src="images/v2/reactive-spring-landing_22.gif"/>
+    </div>
+    <div id="row-1"><img src="images/v2/reactive-spring-landing_03.gif"/></div>
     <div id="row-2">
         <div>
-            <div style="float: left;"><img src="images/v1/reactive-spring-cover-art_02.gif"/></div>
+            <div style="float: left;"><img src="images/v2/reactive-spring-landing_05.gif"/></div>
 
             <div id="logo-container" style="float: left;">
                 <div id="leaf"></div>
-                <img src="images/v1/reactive-spring-cover-art_05.gif"/></div>
-            <div style="float: left;"><img src="images/v1/reactive-spring-cover-art_04.gif"/></div>
+                <img src="images/v2/reactive-spring-landing_08.gif"/></div>
+            <div style="float: left;"><img src="images/v2/reactive-spring-landing_07.gif"/></div>
         </div>
     </div>
-    <div><img class="letters" src="images/v1/cover_01.jpg"/></div>
+    <div><img class="letters" src="images/v2/reactive-spring-landing_11.gif"/></div>
+    <!--
+
     <div><img class="letters" src="images/v1/cover_02.png"/></div>
+    -->
+    <div>
+        <div><img src="images/v2/reactive-spring-landing_15.gif"/><a href="http://twitter.com/Starbuxman"><img
+                src="images/v2/reactive-spring-landing_17.gif"/></a></div>
+    </div>
+
 </div>
 <div id="hideme-1"></div>
 <div id="hideme-2"></div>
