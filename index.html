@@ -4,14 +4,34 @@
         The Reactive Spring Book: Coming Soon!
     </title>
     <style>
+
         .letters {
             width: 400px
         }
+        .links {
+        	font-family: sans-serif;
+        	text-transform: uppercase;
+        	padding-bottom: 10px;
+        	padding-top: 10px;
+
+        }
+
+        .links a {
+        	text-decoration: none;
+        	color : gray;
+        	font-weight: bold ; 
+        	letter-spacing: 110%;
+        }
+
+    	.links a:hover {
+    		color: neon-green;
+    		text-decoration: underline;
+    	}
 
         div {
         }
 
-        #logo {
+        #logo , .h-box {
             width: calc(60% - 0px);
             text-align: center;
             margin: auto;
@@ -22,6 +42,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
         #row-2 {
@@ -54,6 +75,11 @@
             content: url('images/v2/reactive-spring-landing_06.gif') url('images/v2/reactive-spring-landing_06-yellow.gif');;
         }
 
+
+		 .to-book:hover {
+		 	cursor: pointer;
+		 }
+
         /*
          * horrific hack to precache the image for FF
          */
@@ -65,25 +91,28 @@
             background: url('images/v2/reactive-spring-landing_06-yellow.gif');
         }
     </style>
+
 </head>
 <body style="padding-top: 100px">
-
+<div class="h-box links">
+	<a href="http://leanpub.com/reactive-spring">Buy on <span style="color:black;font-size: larger">Leanpub</span></a>
+</div>
 <div id="logo">
-    <div style="padding-bottom: 20px">
+    <!--<div style="padding-bottom: 20px">
         <img src="images/v2/reactive-spring-landing_27.gif"/>
-    </div>
+    </div>-->
     <div id="row-1"><img src="images/v2/reactive-spring-landing_03.gif"/></div>
     <div id="row-2">
         <div>
             <div style="float: left;"><img src="images/v2/reactive-spring-landing_05.gif"/></div>
 
-            <div id="logo-container" style="float: left;">
+            <div class="to-book" style="float: left;">
                 <div id="leaf"></div>
                 <img src="images/v2/reactive-spring-landing_08.gif"/></div>
             <div style="float: left;"><img src="images/v2/reactive-spring-landing_07.gif"/></div>
         </div>
     </div>
-    <div><img src="images/v2/reactive-spring-landing_15.gif" style="width : 30% ; padding-bottom: 20px; padding-top: 20px"/></div>
+    <div><img class="to-book" src="images/v2/reactive-spring-landing_15.gif" style="width : 30% ; padding-bottom: 20px; padding-top: 20px"/></div>
     <div>
         <img src="images/v2/reactive-spring-landing_20.gif"    />
         <a href="http://twitter.com/Starbuxman"><img src="images/v2/reactive-spring-landing_17.gif"/></a>
@@ -91,5 +120,20 @@
 </div>
 <div id="hideme-1"></div>
 <div id="hideme-2"></div>
+<script>
+	function redirect(elem) {
+	  	elem.addEventListener('click', function(evt){
+	    	window.location = 'http://leanpub.com/reactive-spring';
+		});
+	}
+
+	window.addEventListener('load', function(e){ 
+		var liens = document.getElementsByClassName( 'to-book');
+		for (var i =0 ;i < liens.length; i++){
+			redirect(liens[i]);
+		}
+
+	});
+</script>
 </body>
 </html>
