@@ -5,6 +5,6 @@ applications:
   instances: 1
   memory: 512M
   routes:
-  - route: rsb-site.cfapps.io
+  # - route: rsb-site.cfapps.io
   - route: www.reactivespring.io
-  stack: cflinuxfs2
+  # stack: cflinuxfs2

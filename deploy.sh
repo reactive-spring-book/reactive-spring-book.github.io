@@ -14,6 +14,8 @@ ce_dir=$(cd $(dirname $0) && pwd)
 ce_bin_dir=${ce_dir}/bin/${platform}
 export PATH=$PATH:$ce_bin_dir
 
+# when running this locally u might want to restore this line 
+# export CF_SPACE=reactive-spring-book
 cf login -a $CF_API -u $CF_USER -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
 cf push -f manifest.yml
 
