@@ -17,3 +17,4 @@ export PATH=$PATH:$ce_bin_dir
 cf login -a $CF_API -u $CF_USER -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE
 cf push -f manifest.yml
 
+
