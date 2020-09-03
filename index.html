@@ -1,139 +1,141 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>
-        The Reactive Spring Book: Coming Soon!
-    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Josh Long">
+    <title> The Grid</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     <style>
-
-        .letters {
-            width: 400px
-        }
-        .links {
-        	font-family: sans-serif;
-        	text-transform: uppercase;
-        	padding-bottom: 10px;
-        	padding-top: 10px;
-
-        }
-
-        .links a {
-        	text-decoration: none;
-        	color : gray;
-        	font-weight: bold ; 
-        	letter-spacing: 110%;
-        }
-
-    	.links a:hover {
-    		color: neon-green;
-    		text-decoration: underline;
-    	}
-
-        div {
-        }
-
-        #logo , .h-box {
-            width: calc(60% - 0px);
-            text-align: center;
-            margin: auto;
-        }
-
         body {
-            border: 0;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
+            border: 20px solid #f6f06b;
+            min-height: 100vh;
         }
 
-        #row-2 {
-            display: inline-block;
-            margin: auto;
+        #cover-image {
+            width: 700px;
+            margin: 0 auto;
         }
 
-        #leaf {
-            width: 159px;
-            height: 130px;
-            margin: 0;
-            padding: 0;
-            will-change: transform;
-            transform: translateZ(0);
-            border: 0;
-            background-image: url('images/v2/reactive-spring-landing_06.gif');
+        #rsb-screen {
+
         }
 
-        #leaf:hover {
-            will-change: transform;
-            transform: translateZ(0); /* horrific hack to stop repaint issues on Safari */
-            background-image: url('images/v2/reactive-spring-landing_06-yellow.gif');
+        #rsb-screen > .row {
+            min-height: 100vh;
         }
 
-        /*
-         * horrific hack to precache the image for everything but FF
-         */
-        body:after {
-            display: none;
-            content: url('images/v2/reactive-spring-landing_06.gif') url('images/v2/reactive-spring-landing_06-yellow.gif');;
+        .flex-fill {
+            flex: 1 1 auto;
         }
 
-
-		 .to-book:hover {
-		 	cursor: pointer;
-		 }
-
-        /*
-         * horrific hack to precache the image for FF
-         */
-        #hideme-1 {
-            background: url('images/v2/reactive-spring-landing_06.gif');
+        a  {
+            color:  #2bb673
+        }
+        .top-center-menu {
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+            /*width: 500px;*/
         }
 
-        #hideme-2 {
-            background: url('images/v2/reactive-spring-landing_06-yellow.gif');
+        .market {
+            font-size: x-large;
+            font-family: "Lucida Grande", "Arial Black", "Helvetica Neue", sans-serif;
+            font-weight: bold;
         }
+        .market a {
+            font-size:  small;
+        }
+
     </style>
+    <script>
 
+      function installMouseOver(imgId, before, after) {
+        console.log('loading...')
+        const img = document.getElementById(imgId)
+        img.addEventListener('mouseenter', (e) => {
+          console.debug('mouseenter')
+          img.setAttribute('src', after)
+        })
+        img.addEventListener('mouseleave', (e) => {
+          console.debug('mouseleave')
+          img.setAttribute('src', before)
+        })
+      }
+
+      window.addEventListener('load', (e) => {
+        console.debug('loading...')
+        const imgId = 'cover-image'
+        const before = 'images/take-2/white.png';
+        const after = 'images/take-2/yellow.png';
+        installMouseOver(imgId, before, after)
+      })
+
+    </script>
 </head>
-<body style="padding-top: 100px">
-<div class="h-box links">
-	<a href="http://leanpub.com/reactive-spring">Buy on <span style="color:black;font-size: larger">Leanpub</span></a>
-</div>
-<div id="logo">
-    <!--<div style="padding-bottom: 20px">
-        <img src="images/v2/reactive-spring-landing_27.gif"/>
-    </div>-->
-    <div id="row-1"><img src="images/v2/reactive-spring-landing_03.gif"/></div>
-    <div id="row-2">
-        <div>
-            <div style="float: left;"><img src="images/v2/reactive-spring-landing_05.gif"/></div>
+<body id="rsb-screen">
 
-            <div class="to-book" style="float: left;">
-                <div id="leaf"></div>
-                <img src="images/v2/reactive-spring-landing_08.gif"/></div>
-            <div style="float: left;"><img src="images/v2/reactive-spring-landing_07.gif"/></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2   "></div>
+        <div class="col-8 ">
+            <div class="top-center-menu">
+
+
+                <div>
+                    Available now on     <a href="https://leanpub.com/reactive-spring" class="market"> Leanpub </a></div>
+                <div>
+                    Pre-order for Kindle on
+                    <span class="market">Amazon (<a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
+                        <a href="https://www.amazon.in/dp/B08H4QZFM8">IN</a>
+                        <a href="https://www.amazon.co.uk/dp/B08H4QZFM8">UK</a>
+                        <a href="https://www.amazon.fr/dp/B08H4QZFM8">FR</a>
+                        <a href="https://www.amazon.es/dp/B08H4QZFM8">ES</a>
+                        <a href="https://www.amazon.nl/dp/B08H4QZFM8">NL</a>
+                        <a href="https://www.amazon.co.jp/dp/B08H4QZFM8">JP</a>
+                        <a href="https://www.amazon.com.br/dp/B08H4QZFM8">BR</a>
+                        <a href="https://www.amazon.ca/dp/B08H4QZFM8">CA</a>
+                        <a href="https://www.amazon.com.mx/dp/B08H4QZFM8">MX</a>
+                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
+
+
+                        )</span>
+                </div>
+
+                <div>
+                    Print Edition Coming Soon on <span class="market">Amazon </span>!
+                </div>
+            </div>
+        </div>
+        <div class="col-2   "></div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm align-items-center  " style="padding-top: 50px">
+            <img id="cover-image" style="margin: 0 auto" src="images/take-2/white.png"/>
+        </div>
+        <div class="col-sm">
         </div>
     </div>
-    <div><img class="to-book" src="images/v2/reactive-spring-landing_15.gif" style="width : 30% ; padding-bottom: 20px; padding-top: 20px"/></div>
-    <div>
-        <img src="images/v2/reactive-spring-landing_20.gif"    />
-        <a href="http://twitter.com/Starbuxman"><img src="images/v2/reactive-spring-landing_17.gif"/></a>
-    </div>
 </div>
-<div id="hideme-1"></div>
-<div id="hideme-2"></div>
-<script>
-	function redirect(elem) {
-	  	elem.addEventListener('click', function(evt){
-	    	window.location = 'http://leanpub.com/reactive-spring';
-		});
-	}
 
-	window.addEventListener('load', function(e){ 
-		var liens = document.getElementsByClassName( 'to-book');
-		for (var i =0 ;i < liens.length; i++){
-			redirect(liens[i]);
-		}
 
-	});
-</script>
+<!---->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 </html>
