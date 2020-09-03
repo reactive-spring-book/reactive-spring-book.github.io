@@ -19,7 +19,7 @@
         }
 
         #cover-image {
-            width: 700px;
+            width: 300px;
             margin: 0 auto;
         }
 
@@ -61,21 +61,21 @@
         console.log('loading...')
         const img = document.getElementById(imgId)
         img.addEventListener('mouseenter', (e) => {
-          console.debug('mouseenter')
+          console.debug('mouseenter');
           img.setAttribute('src', after)
-        })
+        });
         img.addEventListener('mouseleave', (e) => {
-          console.debug('mouseleave')
+          console.debug('mouseleave');
           img.setAttribute('src', before)
-        })
+        });
       }
 
       window.addEventListener('load', (e) => {
-        console.debug('loading...')
-        const imgId = 'cover-image'
+        console.debug('loading...');
+        const imgId = 'cover-image';
         const before = 'images/take-2/white.png';
         const after = 'images/take-2/yellow.png';
-        installMouseOver(imgId, before, after)
+        installMouseOver(imgId, before, after);
       })
 
     </script>
@@ -83,18 +83,19 @@
 <body id="rsb-screen">
 
 
-<div class="container">
+<div class="container  ">
     <div class="row">
         <div class="col-2   "></div>
         <div class="col-8 ">
             <div class="top-center-menu">
-
-
                 <div>
-                    Available now on     <a href="https://leanpub.com/reactive-spring" class="market"> Leanpub </a></div>
+                    Available now on
+                    <a href="https://leanpub.com/reactive-spring" class="market"> Leanpub </a></div>
                 <div>
                     Pre-order for Kindle on
-                    <span class="market">Amazon (<a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
+                    <span class="market">Amazon
+                        <br/>
+                        (<a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
                         <a href="https://www.amazon.in/dp/B08H4QZFM8">IN</a>
                         <a href="https://www.amazon.co.uk/dp/B08H4QZFM8">UK</a>
                         <a href="https://www.amazon.fr/dp/B08H4QZFM8">FR</a>
@@ -104,24 +105,22 @@
                         <a href="https://www.amazon.com.br/dp/B08H4QZFM8">BR</a>
                         <a href="https://www.amazon.ca/dp/B08H4QZFM8">CA</a>
                         <a href="https://www.amazon.com.mx/dp/B08H4QZFM8">MX</a>
-                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
-
-
-                        )</span>
+                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a> )</span>
                 </div>
 
                 <div>
-                    Print Edition Coming Soon on <span class="market">Amazon </span>!
+                    Print Edition Coming Soon on  <br/>
+                    <span class="market">Amazon </span>!
                 </div>
             </div>
         </div>
         <div class="col-2   "></div>
     </div>
-    <div class="row">
+    <div class="row " style="  max-height: 100% ;    ">
         <div class="col-sm">
         </div>
-        <div class="col-sm align-items-center  " style="padding-top: 50px">
-            <img id="cover-image" style="margin: 0 auto" src="images/take-2/white.png"/>
+        <div class="col-sm align-items-center  " style=" text-align: center; padding-top: 50px">
+            <img id="cover-image" style="margin: 0 auto; text-align: center;  " src="images/take-2/white.png"/>
         </div>
         <div class="col-sm">
         </div>
