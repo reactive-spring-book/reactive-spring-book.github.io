@@ -5,97 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Josh Long">
-    <title>  
-	Reactive Spring is now available!
-	</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    <title>Reactive Spring is now available!</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <style>
-        body {
-            border: 20px solid #f6f06b;
-            min-height: 100vh;
-        }
-
-        #cover-image {
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        #rsb-screen {
-
-        }
-
-        #rsb-screen > .row {
-            min-height: 100vh;
-        }
-
-        .flex-fill {
-            flex: 1 1 auto;
-        }
-
-        a  {
-            color:  #2bb673
-        }
-        .top-center-menu {
-            padding: 20px;
-            text-align: center;
-            margin: 0 auto;
-            /*width: 500px;*/
-        }
-
-        .market {
-            font-size: x-large;
-            font-family: "Lucida Grande", "Arial Black", "Helvetica Neue", sans-serif;
-            font-weight: bold;
-        }
-        .market a {
-            font-size:  small;
-        }
-
-    </style>
     <script>
 
       function installMouseOver(imgId, before, after) {
-        console.log('loading...')
+        console.debug('loading...')
         const img = document.getElementById(imgId)
         img.addEventListener('mouseenter', (e) => {
-          console.debug('mouseenter');
+          console.debug('mouseenter')
           img.setAttribute('src', after)
         });
         img.addEventListener('mouseleave', (e) => {
-          console.debug('mouseleave');
+          console.debug('mouseleave')
           img.setAttribute('src', before)
         });
       }
 
       window.addEventListener('load', (e) => {
-        console.debug('loading...');
-        const imgId = 'cover-image';
-        const before = 'images/take-2/white.png';
-        const after = 'images/take-2/yellow.png';
-        installMouseOver(imgId, before, after);
-      })
+        console.debug('loading...')
+        const imgId = 'cover-image'
+        const before = 'images/white.png'
+        const after = 'images/yellow.png'
+        installMouseOver(imgId, before, after)
+      });
 
     </script>
 </head>
 <body id="rsb-screen">
 
 
-<div class="container  ">
-    <div class="row">
-        <div class="col-2   "></div>
+<div class="container debug">
+    <div class="row ">
+        <div class="col-2"></div>
         <div class="col-8 ">
             <div class="top-center-menu">
                 <div>
                     Available now on
-                    <a href="https://leanpub.com/reactive-spring" class="market"> Leanpub </a></div>
+                    <a href="https://leanpub.com/reactive-spring" class="market">Leanpub</a></div>
                 <div>
                     Pre-order for Kindle on
                     <span class="market">Amazon
                         <br/>
-                        (<a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
+                        (
+                        <a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
                         <a href="https://www.amazon.in/dp/B08H4QZFM8">IN</a>
                         <a href="https://www.amazon.co.uk/dp/B08H4QZFM8">UK</a>
                         <a href="https://www.amazon.fr/dp/B08H4QZFM8">FR</a>
@@ -105,25 +60,20 @@
                         <a href="https://www.amazon.com.br/dp/B08H4QZFM8">BR</a>
                         <a href="https://www.amazon.ca/dp/B08H4QZFM8">CA</a>
                         <a href="https://www.amazon.com.mx/dp/B08H4QZFM8">MX</a>
-                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a> )</span>
+                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
+                        )
+                    </span>
                 </div>
-
                 <div>
-                    Print Edition Coming Soon on  <br/>
-                    <span class="market">Amazon </span>!
+                    Print Edition Coming Soon on <br/>
+                    <span class="market">Amazon</span>!
                 </div>
             </div>
         </div>
-        <div class="col-2   "></div>
+        <div class="col-2"></div>
     </div>
-    <div class="row " style="  max-height: 100% ;    ">
-        <div class="col-sm">
-        </div>
-        <div class="col-sm align-items-center  " style=" text-align: center; padding-top: 50px">
-            <img id="cover-image" style="margin: 0 auto; text-align: center;  " src="images/take-2/white.png"/>
-        </div>
-        <div class="col-sm">
-        </div>
+    <div class="row debug">
+        <img id="cover-image" style="width: 80%; margin: 0 auto; text-align: center;" src="images/white.png"/>
     </div>
 </div>
 
@@ -138,5 +88,55 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
+<style>
+    body {
+
+        border: 20px solid #f6f06b;
+    }
+
+    #cover-image {
+        /*width: 300px;*/
+        margin: 0 auto;
+    }
+
+    #rsb-screen {
+
+    }
+
+    #rsb-screen > .row {
+
+    }
+
+    .flex-fill {
+        flex: 1 1 auto;
+    }
+
+    a {
+        color: #2bb673
+    }
+
+    .top-center-menu {
+        padding: 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .market {
+        font-size: x-large;
+        font-family: "Lucida Grande", "Arial Black", "Helvetica Neue", sans-serif;
+        font-weight: bold;
+    }
+
+    .market a {
+        font-size: small;
+    }
+
+    .debug {
+        /*border: 1px solid black;*/
+    }
+
+</style>
+
 </body>
 </html>
