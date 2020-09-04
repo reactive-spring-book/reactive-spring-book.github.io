@@ -34,6 +34,81 @@
 
     </script>
 
+    <style>
+
+        .market-name {
+            font-family: "Lucida Grande", "Arial Black", "Helvetica Neue", sans-serif;
+            font-weight: bold;
+
+
+            /*    padding-right: 10px;
+                text-align: right;
+                display: inline-block;
+                vertical-align: top;
+                width: 200px;*/
+            font-size: larger;
+            text-align: right;
+        }
+
+        /*
+
+            .col-2 {
+                display: inline-block;
+                vertical-align: top
+            }
+        */
+
+        .book-image {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .frame {
+            height: 100vh;
+            overflow: scroll;
+            border: 20px solid #f6f06b;
+        }
+
+        #cover-image {
+            /*width: 300px;*/
+            margin: 0 auto;
+        }
+
+        #rsb-screen {
+
+        }
+
+        #rsb-screen > .row {
+
+        }
+
+        .availability-info {
+
+        }
+
+        .availability-info a {
+            font-size: smaller;
+        }
+
+        .flex-fill {
+            flex: 1 1 auto;
+        }
+
+        a {
+            color: #2bb673
+        }
+
+        .top-center-menu {
+            margin: 0 auto;
+        }
+
+        .debug {
+            /*border: 1px solid black;*/
+        }
+
+    </style>
+
 </head>
 <body id="rsb-screen">
 <div class="frame">
@@ -41,48 +116,61 @@
         <div class="row debug">
             <img class="book-image" src="images/book-title.png"/>
         </div>
-        <div class="row">
-            <div class="col-12 ">
+        <div class="row" style="padding-top: 10px">
+            <div class="col-12">
                 <div class="top-center-menu">
-                    <div class="availability-info">
-                        <div>
-                            Available now on
-                            <a href="https://leanpub.com/reactive-spring" class="market">Leanpub</a>
-                        </div>
-                        <div>
-                            Pre-order for Kindle on
-                            <span class="market">Amazon</span>
-                        <br/>
-                        (
-                        <a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
-                        <a href="https://www.amazon.in/dp/B08H4QZFM8">IN</a>
-                        <a href="https://www.amazon.co.uk/dp/B08H4QZFM8">UK</a>
-                        <a href="https://www.amazon.fr/dp/B08H4QZFM8">FR</a>
-                        <a href="https://www.amazon.es/dp/B08H4QZFM8">ES</a>
-                        <a href="https://www.amazon.nl/dp/B08H4QZFM8">NL</a>
-                        <a href="https://www.amazon.co.jp/dp/B08H4QZFM8">JP</a>
-                        <a href="https://www.amazon.com.br/dp/B08H4QZFM8">BR</a>
-                        <a href="https://www.amazon.ca/dp/B08H4QZFM8">CA</a>
-                        <a href="https://www.amazon.com.mx/dp/B08H4QZFM8">MX</a>
-                        <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
-                        )
 
-                        </div>
-                        <div>
-                            Print Edition Coming Soon on <br/>
-                            <span class="market">Amazon</span>!
+                    <div class="availability-info container-fluid debug" style="width: 100%">
+
+                        <div class="row ">
+
+
+                            <div class="col-4 market-name">
+                                Leanpub:
+                            </div>
+                            <div class="col-8">
+                                <a href="https://leanpub.com/reactive-spring" class="market">Order Now!</a>
+                            </div>
                         </div>
 
-                        
+                        <div class="row">
+                            <div class="  col-4 market-name">
+                                Amazon:
+                            </div>
+                            <div class="  col-8">
+                                <P>
+
+                                    Pre-order for Kindle in these territories:
+
+                                    (
+                                    <a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
+                                    <a href="https://www.amazon.in/dp/B08H4QZFM8">IN</a>
+                                    <a href="https://www.amazon.co.uk/dp/B08H4QZFM8">UK</a>
+                                    <a href="https://www.amazon.fr/dp/B08H4QZFM8">FR</a>
+                                    <a href="https://www.amazon.es/dp/B08H4QZFM8">ES</a>
+                                    <a href="https://www.amazon.nl/dp/B08H4QZFM8">NL</a>
+                                    <a href="https://www.amazon.co.jp/dp/B08H4QZFM8">JP</a>
+                                    <a href="https://www.amazon.com.br/dp/B08H4QZFM8">BR</a>
+                                    <a href="https://www.amazon.ca/dp/B08H4QZFM8">CA</a>
+                                    <a href="https://www.amazon.com.mx/dp/B08H4QZFM8">MX</a>
+                                    <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
+                                    )
+
+                                </P>
+                                <p> Print Edition Coming Soon!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row debug">
+        <div class="row debug" style="padding-top: 10px">
             <img id="cover-image" class="book-image" src="images/white.png"/>
         </div>
     </div>
+
 </div>
+
 <!---->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -94,68 +182,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-<style>
-    .book-image {
-        width: 70%;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .frame {
-        height: 100vh;
-        overflow: scroll;
-        border: 20px solid #f6f06b;
-    }
-
-    #cover-image {
-        /*width: 300px;*/
-        margin: 0 auto;
-    }
-
-    #rsb-screen {
-
-    }
-
-    #rsb-screen > .row {
-
-    }
-
-    .availability-info {
-
-    }
-    .availability-info a {
-        font-size: smaller;
-    }
-
-    .flex-fill {
-        flex: 1 1 auto;
-    }
-
-    a {
-        color: #2bb673
-    }
-
-    .top-center-menu {
-        padding: 20px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .market {
-        font-size: x-large;
-        font-family: "Lucida Grande", "Arial Black", "Helvetica Neue", sans-serif;
-        font-weight: bold;
-    }
-
-    .market a {
-        font-size: small;
-    }
-
-    .debug {
-        /*border: 1px solid black;*/
-    }
-
-</style>
 
 </body>
 </html>
