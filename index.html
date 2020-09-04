@@ -33,21 +33,28 @@
       });
 
     </script>
+
 </head>
 <body id="rsb-screen">
 
 
-<div class="container debug">
-    <div class="row ">
-        <div class="col-2"></div>
-        <div class="col-8 ">
-            <div class="top-center-menu">
-                <div>
-                    Available now on
-                    <a href="https://leanpub.com/reactive-spring" class="market">Leanpub</a></div>
-                <div>
-                    Pre-order for Kindle on
-                    <span class="market">Amazon
+<div class="frame">
+
+    <div class="container debug">
+        <div class="row debug">
+            <img class="book-image" src="images/book-title.png"/>
+        </div>
+
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 ">
+                <div class="top-center-menu">
+                    <div>
+                        Available now on
+                        <a href="https://leanpub.com/reactive-spring" class="market">Leanpub</a></div>
+                    <div>
+                        Pre-order for Kindle on
+                        <span class="market">Amazon
                         <br/>
                         (
                         <a href="https://www.amazon.com/dp/B08H4QZFM8">US</a>
@@ -63,21 +70,22 @@
                         <a href="https://www.amazon.com.au/dp/B08H4QZFM8">AU</a>
                         )
                     </span>
-                </div>
-                <div>
-                    Print Edition Coming Soon on <br/>
-                    <span class="market">Amazon</span>!
+                    </div>
+                    <div>
+                        Print Edition Coming Soon on <br/>
+                        <span class="market">Amazon</span>!
+                    </div>
                 </div>
             </div>
+            <div class="col-2"></div>
         </div>
-        <div class="col-2"></div>
+
+        <div class="row debug">
+            <img id="cover-image" style="width: 70%; margin: 0 auto; text-align: center;" src="images/white.png"/>
+        </div>
     </div>
-    <div class="row debug">
-        <img id="cover-image" style="width: 80%; margin: 0 auto; text-align: center;" src="images/white.png"/>
-    </div>
+
 </div>
-
-
 <!---->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -90,8 +98,20 @@
         crossorigin="anonymous"></script>
 
 <style>
+    .book-image {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     body {
 
+
+    }
+
+    .frame {
+        height: 100vh;
+        overflow: scroll;
         border: 20px solid #f6f06b;
     }
 
